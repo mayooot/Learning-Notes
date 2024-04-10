@@ -1,8 +1,7 @@
 #go底层实现 #go #gmp调度模型
 # GMP模型
 ## GMP调度
-
-![[gmp流程.png]]
+![gmp流程.png](./图片/gmp流程.png)
 ## GMP源码
 G(goroutine)
 go 语言中的协程 goroutine 的缩写，相当于操作系统中的进程控制块。其中存着 goroutine 的运行时栈信息，CPU 的一些寄存器的值以及执行的函数指令等。sched字段保存了 goroutine 的上下文。goroutine 切换的时候不同于线程有 OS 来负责这部分数据，而是由一个 gobuf 结构体来保存。
